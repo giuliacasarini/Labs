@@ -1,0 +1,10 @@
+version: '3'
+services:
+  producer:
+    image: lab2-producer
+    ports:
+      - "8082:8081"
+  consumer:
+    image: lab2-consumer
+    ports:
+      - "8083:8080"

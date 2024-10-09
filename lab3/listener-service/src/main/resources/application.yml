@@ -1,0 +1,28 @@
+server:
+  port: 7002
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+app:
+  consumer-service:
+    host: localhost
+    port: 7001
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+server:
+  port: 8080
+
+app:
+  consumer-service:
+    host: consumer-service
+    port: 8080
